@@ -1,11 +1,11 @@
 setup.printList = function printList(list) {
     let output = "";
-    while (list.length) {
-        switch (list.length) {
-            case 1: output += list.shift(); break;
-            case 2: output += list.shift() + " and "; break;
-            default: output += list.shift() + ", ";
+    list.forEach((element, index) => {
+        switch (index) {
+            case list.length - 1: output += element; break;
+            case list.length - 2: output += element + " and "; break;
+            default: output += element + ", ";
         }
-    }
+    })
     return output;
 }
