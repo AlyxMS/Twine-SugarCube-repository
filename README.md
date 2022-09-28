@@ -3,6 +3,16 @@ Some macros and functions I made for SugarCube projects that have use outside of
 
 <br>
 
+# Index
+
+- [Functions](#Functions)
+    - [printList](#function_printList.js) Array of string to a single string in the format of `A, B and C`.
+    - [numSpread](#function_numSpread.js) A number ±spread, optionally rounded.
+    - [weightedRandom](#function_weightedRandom.js) Random element from array, biased by weight.
+- [Macros](#Macros)
+
+<hr><br>
+
 # Functions
 
 ## function_printList.js
