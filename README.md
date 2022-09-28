@@ -11,7 +11,7 @@ Some macros and functions I made for SugarCube projects that have use outside of
 ### Usage: `setup.printList(Array)` → ***String***
 ### Example:
 ```js
-console.log(setup.printList(["Cowboy"]));>>
+console.log(setup.printList(["Cowboy"]));
 //Output: "Cowboy"
 console.log(setup.printList(["Cowboy", "Marine"]));
 //Output: "Cowboy and Marine"
@@ -34,15 +34,15 @@ console.log(setup.printList(["Cowboy", "Marine", "Harry", "Trucks"]));
 
 ### Example:
 ```js
-console.log(setup.numberSpread(100, 10));>>
-console.log(setup.numberSpread(100, 10));>>
-console.log(setup.numberSpread(100, 10));>>
+console.log(setup.numberSpread(100, 10));
+console.log(setup.numberSpread(100, 10));
+console.log(setup.numberSpread(100, 10));
 //Output: 95
 //Output: 107
 //Output: 100
-console.log(setup.numberSpread(100, 10, 2));>>
+console.log(setup.numberSpread(100, 10, 2));
 //Output: 98.97
-console.log(setup.numberSpread(0.5, 0.2, 1));>>
+console.log(setup.numberSpread(0.5, 0.2, 1));
 //Output: 0.6
 ```
 
