@@ -135,7 +135,7 @@ setup.pistol = new Item({
 setup.addItem(setup.pistol);
 
 //Add 3 pistols to $shopInventory, which is an empty array
-setup.addItem(setup.pistol, 2, State.variables.shopInventory);
+setup.addItem(setup.pistol, 3, State.variables.shopInventory);
 
 console.log(State.variables.shopInventory);
 //Output: Array[Item, Item, Item]
