@@ -16,7 +16,7 @@ Some macros and functions I made for SugarCube projects that have use outside of
 # Functions
 
 ## function_printList.js
-*Returns an Array of strings as a single string in the format of `a, b and c`.*
+*Returns an Array of strings as a single string in the format of `A, B and C`.*
 
 ### Usage: `setup.printList(Array)` → ***String***
 ### Example:
@@ -68,7 +68,7 @@ console.log(setup.numSpread(0.5, 0.2, 1));
 
 ### Example:
 ```js
-var weightedArray = [["A", 2], ["B", 0.5], ["C": 7.5]];
+var weightedArray = [["A", 2], ["B", 0.5], ["C", 7.5]];
 /* As all weights add up to 10. "A" has a chance of 2/10(20%), B has a chance of 0.5/10(5%), C has a chance of 7.5/10(75%). */
 console.log(setup.weightedRandom(weightedArray));
 //Output: "C"
