@@ -70,7 +70,8 @@ console.log(setup.numSpread(0.5, 0.2, 1));
 ### Example:
 ```js
 var weightedArray = [["A", 2], ["B", 0.5], ["C", 7.5]];
-/* As all weights add up to 10. "A" has a chance of 2/10(20%), B has a chance of 0.5/10(5%), C has a chance of 7.5/10(75%). */
+/* As all weights add up to 10. "A" has a chance of 2/10(20%), B has a chance of 0.5/10(5%), 
+C has a chance of 7.5/10(75%). */
 console.log(setup.weightedRandom(weightedArray));
 //Output: "C"
 console.log(setup.weightedRandom(weightedArray));
@@ -139,7 +140,8 @@ setup.addItem(setup.pistol, 3, State.variables.shopInventory);
 
 console.log(State.variables.shopInventory);
 //Output: Array[Item, Item, Item]
-/* 3 objects are added as pistol is unstackable. This means if one of the pistol's property changed(increased damage, reduced ammo etc...), the other pistols will not be affected. */
+/* 3 objects are added as pistol is unstackable. This means if one of the pistol's property 
+changed(increased damage, reduced ammo etc...), the other pistols will not be affected. */
 
 //Count the amount of pistols in $shopInventory
 setup.countItem(setup.pistol, State.variables.shopInventory);
@@ -164,7 +166,10 @@ console.log(State.variables.inventory);
 setup.countItem(setup.bullet);
 //Output: 100
 
-/* Warning: The functions will not adapt to unexpected scenarios. I.E. a stackable item is pushed/unshifted while the same item already exists within the array. countItem will only return the amount of the first item with matching UID. This is planned to be gated off with the Inventory Class */
+/* Warning: The functions will not adapt to unexpected scenarios. I.E. a stackable item is 
+pushed/unshifted while the same item already exists within the array. countItem will only 
+return the amount of the first item with matching UID. This is planned to be gated off with 
+the Inventory Class */
 ```
 <br>
 
