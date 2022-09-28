@@ -30,7 +30,7 @@ console.log(setup.printList(["Cowboy", "Marine", "Harry", "Trucks"]));
 
 - `base`(Number): The initial value.
 - `spread`(Number): Max offset amount.
-- `Round`(Integer, optional): Decimals the value is rounded to. Default to 0.
+- `round`(Integer, optional): Decimals the value is rounded to. Default to 0.
 
 ### Example:
 ```js
