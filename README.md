@@ -5,7 +5,7 @@ Some macros and functions I made for SugarCube projects that have use outside of
 
 # Functions
 
-## printList.js
+## function_printList.js
 *Returns an Array of strings as a single string in the format of `a, b and c`.*
 
 ### Usage: `setup.printList(Array)` → ***String***
@@ -23,7 +23,7 @@ console.log(setup.printList(["Cowboy", "Marine", "Harry", "Trucks"]));
 
 ----
 
-## numSpread.js
+## function_numSpread.js
 *Returns the **base** number with a plus or minus random offset applied, to the maximum amount of **spread**, rounded to **round** decimals.*
 
 ### Usage: `setup.numSpread(base, spread[, round])` → ***Number***
@@ -47,7 +47,7 @@ console.log(setup.numSpread(0.5, 0.2, 1));
 ```
 ----
 
-## weightedRandom.js
+## function_weightedRandom.js
 *Returns a random content from an array structured for weightedRandom biased to the content's weight.*
 
 ### Usage: `setup.weightedRandom(weightedArray)` → ***any***
