@@ -84,6 +84,26 @@ weightedArray.pop(); //Removes the last element
 
 ----
 
+## function_numTransition.js
+*Makes a DOM element containing a number smoothly transition to another number.*
+
+### Usage: `setup.numTransition(selector, targetNumber[, time, steps, curve, decimal])`
+
+- `selector`(String): Query selector to select the element. The first match will be affected.
+- `targetNumeber`(Number): The number that the element should change to.
+- `time`(Number, optional): The total amount of time the transition should take, in milliseconds. Defaults to 1000(1 second).
+- `steps`(Integer, optional): The number of the steps. Higher number results in smoother transition. Defaults to 20.
+- `curve`(Number, optional): Lower than 1 have an ease out effect, higher than 1 have an ease 1 effect. Defaults to 0.3.
+- `decimal`(Integer, optional): The amount of decimals the number should have. Defaults to 0.
+
+### Example
+```js
+<span id="numberDisplay">64</span>
+<<run setup.numTransition("#numberDisplay", 256)>>
+```
+
+----
+
 ## functions_inventory.js
 *A simple inventory system with item stacking. Inventories are basic arrays and items are saved as `Item` class objects, which allows items with unique properties(such as equipment with durability, weapon with modification, item with special name) but not space-efficient. Copied straight from a project, not easy to adopt for existing projects. Will be reworked for general use eventually.*
 
