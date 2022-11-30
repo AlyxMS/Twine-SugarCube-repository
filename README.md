@@ -9,6 +9,7 @@ Some macros and functions I made for SugarCube projects that have use outside of
     - [printList](#function_printListjs) Array of string to a single string in the format of `A, B and C`.
     - [numSpread](#function_numSpreadjs) A number ±spread, optionally rounded.
     - [weightedRandom](#function_weightedRandomjs) Random element from array, biased by weight.
+    - [numTransition](#function_numTransitionjs) Smoothly transition a DOM element containing number to another number.
     - [inventory](#functions_inventoryjs) A basic inventory system, still in prototype stage.
 - [Macros](#Macros)
 
