@@ -1,13 +1,12 @@
-setup.numTransition = function numTransition(selector, targetNumber, time = 1000, steps = 20, curve = 0.3, decimal = 0) {
-    let target = document.querySelector(selector);
+setup.numTransition = function numTransition2(target, targetNumber, duration = 1000, curve = 0.3, decimal = 0) {
+    if(typeof target === "string") target = document.querySelector(target);
     let originalNumber = parseFloat(target.textContent);
-    for (let i = 0; i < steps; i++) {
-        setTimeout(function () {
-            target.textContent = rounder(originalNumber + (targetNumber - originalNumber) * Math.pow((i + 1) / steps, curve))
-        }, time / steps * i);
+    let startTime;
+    function step(timeStamp) {
+        startTime = startTime ?? timeStamp;
+        let elapsed = Math.min(timeStamp - startTime, duration);
+        target.textContent = (originalNumber + (targetNumber - originalNumber) * Math.pow(elapsed / duration, curve)).toFixed(decimal);
+        if (elapsed < duration) requestAnimationFrame(step);
     }
-    function rounder(inputNum) {
-        if (decimal) return inputNum.toFixed(decimal);
-        else return Math.round(inputNum).toString();
-    }
+    requestAnimationFrame(step);
 }
