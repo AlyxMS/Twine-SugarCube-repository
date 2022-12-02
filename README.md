@@ -85,10 +85,10 @@ weightedArray.pop(); //Removes the last element
 
 ----
 
-## function_numTransition.js → ***HTML Element***
+## function_numTransition.js
 *Makes a DOM element containing a number smoothly transition to another number.*
 
-### Usage: `setup.numTransition(target, targetNumber[, time, steps, curve, decimal])`
+### Usage: `setup.numTransition(target, targetNumber[, time, curve, decimal])` → ***HTML Element***
 
 - `target`(HTML Element | String): If string, target will be the first match using querySelector.
 - `targetNumeber`(Number): The number that the element should change to.
