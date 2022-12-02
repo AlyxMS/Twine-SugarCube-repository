@@ -85,23 +85,28 @@ weightedArray.pop(); //Removes the last element
 
 ----
 
-## function_numTransition.js
+## function_numTransition.js → ***HTML Element***
 *Makes a DOM element containing a number smoothly transition to another number.*
 
-### Usage: `setup.numTransition(selector, targetNumber[, time, steps, curve, decimal])`
+### Usage: `setup.numTransition(target, targetNumber[, time, steps, curve, decimal])`
 
-- `selector`(String): Query selector to select the element. The first match will be affected.
+- `target`(HTML Element | String): If string, target will be the first match using querySelector.
 - `targetNumeber`(Number): The number that the element should change to.
 - `time`(Number, optional): The total amount of time the transition should take, in milliseconds. Defaults to 1000(1 second).
-- `steps`(Integer, optional): The number of the steps. Higher number results in smoother transition. Defaults to 20.
-- `curve`(Number, optional): Lower than 1 have an ease out effect, higher than 1 have an ease 1 effect. Defaults to 0.3.
+- `curve`(Number, optional): Lower than 1 have an ease out effect, higher than 1 have an ease in effect. Defaults to 0.3.
 - `decimal`(Integer, optional): The amount of decimals the number should have. Defaults to 0.
 
 ### Example
 ```js
 <span id="numberDisplay">64</span>
 <<run setup.numTransition("#numberDisplay", 256)>>
+
+<span id="health">50</span>
+<<run setup.numTransition(document.getElementById("health"), 100, 2500)>>
 ```
+
+### Note
+The HTML element must only contain a number with no addtional item. I.E. `<span>22</span>` or `<div>-253.38</div>`.
 
 ----
 
