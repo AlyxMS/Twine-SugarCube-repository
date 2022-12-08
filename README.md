@@ -102,7 +102,8 @@ weightedArray.pop(); //Removes the last element
 <<run setup.numTransition("#numberDisplay", 256)>>
 
 <span id="health">50</span>
-<<run setup.numTransition(document.getElementById("health"), 100, 2500)>>
+//Using the returned element
+setup.numTransition(document.getElementById("health"), 100, 2500).style.color = "red";
 ```
 
 ### Note
