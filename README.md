@@ -12,6 +12,7 @@ Some macros and functions I made for SugarCube projects that have use outside of
     - [numTransition](#function_numTransitionjs) Smoothly transition a DOM element containing number to another number.
     - [inventory](#functions_inventoryjs) A basic inventory system, still in prototype stage.
 - [Macros](#Macros)
+    - [redraw](#macro_redrawjs) Redraws the current passage without passage navigation.
 
 <hr><br>
 
