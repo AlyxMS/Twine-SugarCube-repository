@@ -202,4 +202,33 @@ the Inventory Class */
 
 # Macros
 
-##### There is none.
+## macro_redraw.js
+*A macro that re-renders the current passage, as well as `StoryCaption` or passages defined in `StoryInterface`. Allowing for changes to the passage content to be seen without passage navigation or having to set up a `<<replace>>`.*
+### Usage: `<<redraw [config] [PassageReady Boolean] [PassageDone Boolean] [Time Boolean]>>`
+
+- `config`(case insensitive): Keyword for changing default behavior. If present, will only change the default behavior and not redraw. Default behavior is stored in the setup object and not saved, therefore the keyword is ideally only be used in `StoryInit` or `init` tagged passages. 
+- `PassageReady`(case insensitive): If false, will not run PassageReady on redraw. Defaults to true.
+- `PassageDone`(case insensitive): If false, will not run PassageDone on redraw. Defaults to true.
+- `Interface`(case insensitive): If false, will not redraw StoryCaption or StoryInterface related passages. Defaults to true.
+- `Boolean`: `true` or `false`
+- `Time`(case insensitive): If true, will log time used for each passage and overall time in console. Defaults to false.
+
+### Example:
+```js
+:: StoryInit
+<<set $number = 0>>
+<<redraw config time true>>
+
+:: Start
+$number
+<<link "Add">>
+    <<set $number++>>
+    <<redraw>>
+<</link>>
+```
+
+### Behavior
+1. If PassageReady is found, runs PassageReady.
+2. Prepending PassageHeader and appending PassageFooter if found, then re-renders the current passage.
+3. If PassageDone is found, runs PassageDone.
+4. If StoryInterface is found, updates all elements with attribute `data-passage` that does not contain `macro-` in its class list(I.E. the `<<link>>` macro) and does not have the `passage` class(the main passage). If not, and `StoryCaption` is found, updates StoryCaption.
