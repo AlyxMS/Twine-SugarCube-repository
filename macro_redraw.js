@@ -67,4 +67,4 @@ Macro.add("redraw", {
             timeData.push([label, (performance.now() - prevStamp).toFixed(2)]);
         }
     }
-})
+});
