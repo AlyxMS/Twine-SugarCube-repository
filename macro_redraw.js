@@ -47,7 +47,7 @@ Macro.add("redraw", {
             if (storyInterface) storyInterface.forEach(e => {
                 timeStamp = performance.now();
                 const passageName = e.getAttribute("data-passage");
-                jQuery(e).empty().wiki(Story.get(passageName).processText())
+                jQuery(e).empty().wiki(Story.get(passageName).processText());
                 logTime(passageName, timeStamp);
             });
             else if (storyCaption) {
