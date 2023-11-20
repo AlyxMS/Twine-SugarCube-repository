@@ -6,7 +6,7 @@ Macro.add("redraw", {
         let timeStamp = performance.now();
         //Default Settings
         setup.macro_redraw ??= { passageReady: true, passageDone: true, redrawInterface: true, time: false };
-        config = { ...setup.macro_redraw };
+        const config = { ...setup.macro_redraw };
         //Config
         const args = this.args.map(e => typeof e === "string" ? e.toLowerCase() : e);
         if (args.includes("passageready")) config.passageReady = args[args.indexOf("passageready") + 1];
